@@ -3,9 +3,9 @@
 # license that can be found in the LICENSE file.
 
 from setuptools import setup, find_packages
-from htmlmin import __version__
+from compresshtml import __version__
 
-README = open('README.rst').read()
+README = open('README.md').read()
 
 setup(name='django-compresshtml',
       version=__version__,
