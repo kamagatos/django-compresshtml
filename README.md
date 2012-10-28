@@ -1,14 +1,14 @@
-++++++++++++++
+##################
 django-compresshtml
-++++++++++++++
+###################
 
 
 HTML compressor for django
 
-Why minify HTML code?
+Why compress HTML code?
 =====================
 
-One of important points on client side optimization is compress HTML, with compressed HTML code, you reduce the size of data transferred from your server to your client, and your pages load faster.
+When compressed HTML code, you reduce the size of data transferred from your server to your client, and your pages load faster.
 
 Installing
 ==========
@@ -20,11 +20,11 @@ For install django-compresshtml, run on terminal: ::
 Using the midleware
 ===================
 
-All you need to do is add ``compresshtml.middleware.CompressHtmlMiddleware`` to your ``MIDDLEWARE_CLASSES`` and enable the ``COMPRESS_HTML`` setting: ::
+All you need to do is add ``compresshtml.middleware.CompressHtmlMiddleware`` to your ``MIDDLEWARE_CLASSES`` and enable the ``COMPRESS_HTML`` setting:
 
     MIDDLEWARE_CLASSES = (
-        # other middleware classes
-        'compresshtml.middleware.HCompressHtmlMiddleware',
+        'compresshtml.middleware.CompressHtmlMiddleware',
+        # other middleware classes        
     )
 
     COMPRESS_HTML = True
@@ -36,14 +36,14 @@ The default value for the ``COMPRESS_HTML`` setting is ``not DEBUG``. You only n
 Keeping comments
 ----------------
 
-The default behaviour of the middleware is remove all comments but conditional comments from HTML. If you want to keep your comments, set the setting ``KEEP_COMMENTS_ON_COMPRESSING`` to ``True``: ::
+The default behaviour of the middleware is remove all comments but conditional comments from HTML. If you want to keep your comments, set the setting ``KEEP_COMMENTS_ON_COMPRESSING`` to ``True``:
 
     KEEP_COMMENTS_ON_COMPRESSING = True
 
 Using the decorator
 ===================
 
-django-compresshtml also provides a decorator, that you can use only on views you want to minify the response: ::
+django-compresshtml also provides a decorator, that you can use only on views you want to minify the response:
 
     from compresshtml.decorators import compressed_response
 
@@ -54,16 +54,10 @@ django-compresshtml also provides a decorator, that you can use only on views yo
 development
 ===========
 
-* Source hosted at `GitHub <https://github.com/kamagatos/django-compresshtml>`_
-* Report issues on `GitHub Issues <https://github.com/kamagatos/django-compresshtml/issues>`_
+* Source hosted at `GitHub <https://github.com/kamagatos/django-compresshtml>`
+* Report issues on `GitHub Issues <https://github.com/kamagatos/django-compresshtml/issues>`
 
 Pull requests are very welcomed!
-
-running the tests
------------------
-
-community
-=========
 
 Changelog
 =========
