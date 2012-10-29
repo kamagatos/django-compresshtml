@@ -3,7 +3,6 @@
 # Use of this source code is governed by a BSD-style
 # license that can be found in the LICENSE file.
 
-from django.utils.encoding import force_text
 from django.conf import settings
 import re
 
@@ -11,7 +10,7 @@ def compress_html(html_code):
 
     #remove white spaces between tags
     #use django force_text function to decode text
-    html_code = re.sub(r'>\s+<', r'><', force_text(html_code))
+    html_code = re.sub(r'>\s+<', r'><', html_code)
 
     
     #keep comments or not
