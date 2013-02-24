@@ -3,17 +3,17 @@
 # license that can be found in the LICENSE file.
 
 from setuptools import setup, find_packages
-from compresshtml import __version__
 
 README = open('README.md').read()
 
-setup(name='django-compresshtml',
-      version=__version__,
-      description='HTML compressor for django',
-      long_description=README,
-      author='kamagatos',
-      author_email='kamagatos@gmail.com',
-      packages=find_packages(),
-      include_package_data=True,
-      install_requires=['django',],
-     )
+setup(
+		name='django-compresshtml',
+		version='0.1.2',
+		description='HTML compressor for django',
+		packages=find_packages(),
+		include_package_data=True,
+		license='BSD License',
+		long_description=README,
+		author='Kamagatos',
+		author_email='kamagatos@gmail.com',
+	)
